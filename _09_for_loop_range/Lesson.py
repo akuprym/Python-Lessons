@@ -16,3 +16,18 @@ for i in range(len(numbers)):
     numbers[i] += 1
 
 print(numbers)
+
+# count "o" in string and their indexes
+
+greeting = "Hello, world"
+
+count = 0
+indexes = []
+
+for i in range(len(greeting)):
+    if greeting[i] == "o":
+        count += 1
+        indexes.append(i)
+print(count, indexes)
+
+
