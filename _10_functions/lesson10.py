@@ -9,3 +9,14 @@ def count_vowels(string):
     print(count)
 
 count_vowels("hello, world!")
+
+
+def nothing():
+    pass
+
+
+def format_date(*, number: int, month: str) -> str:
+    return f"The date is {number} of {month}"
+
+print(format_date(number=29, month="August"))
+
