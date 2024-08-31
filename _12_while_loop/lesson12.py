@@ -38,7 +38,7 @@ def play_martingale(*, starting_funds: int, min_bet: int, max_bet: int) -> int:
 
 # print(play_martingale(starting_funds=100, min_bet=1, max_bet=100))
 
-def simulate_martigale_for_n_players(
+def simulate_martingale_for_n_players(
         *,
         starting_funds: int,
         min_bet: int,
@@ -58,7 +58,7 @@ def simulate_martigale_for_n_players(
 
     return total_steps_to_loose / n_games
 
-print(simulate_martigale_for_n_players(
+print(simulate_martingale_for_n_players(
     starting_funds=1000,
     min_bet=1,
     max_bet=100,
