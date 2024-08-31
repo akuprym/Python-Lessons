@@ -14,6 +14,30 @@ students = [
     {"name": "Elon", "surname": "Musk", "grades": None}
 ]
 
+def get_best_students(*, students=list[dict]) -> list[dict]:
+    best_average_grade = 0
+    best_students = []
+
+    for student in students:
+        if student["grades"] is None:
+            average_grade = 0
+        else:
+            average_grade = sum(student["grades"]) / len((student["grades"]))
+        if average_grade > best_average_grade:
+            best_average_grade = average_grade
+            best_students = [student]
+
+        elif average_grade == best_average_grade:
+             best_students.append(student)
+
+    return best_students
+
+
+print(get_best_students(students=students))
+
+
+
+
 
 # решение
 
@@ -35,4 +59,4 @@ def get_best_students(*, students: list[dict]) -> list[dict]:
     return best_students
 
 
-print(get_best_students(students=students))  # Outputs: [{'name': 'John', 'surname': 'Doe', 'grades': [5, 5, 5, 4]}, {"name": "Bill", "surname": "Gates", "grades": [5, 5, 5, 3]}]
+# print(get_best_students(students=students))  # Outputs: [{'name': 'John', 'surname': 'Doe', 'grades': [5, 5, 5, 4]}, {"name": "Bill", "surname": "Gates", "grades": [5, 5, 5, 3]}]
