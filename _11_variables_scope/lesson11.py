@@ -1,0 +1,14 @@
+DEFAULT_LEVEL_EXPERIENCE = 200
+
+def is_leveled_up(*, current_experience:int, gained_experience: int) -> bool:
+    total_experience = current_experience + gained_experience
+    level_up = False
+
+    if total_experience >= DEFAULT_LEVEL_EXPERIENCE:
+        level_up = True
+
+    return level_up
+
+
+
+print(is_leveled_up(current_experience=160, gained_experience=70))
