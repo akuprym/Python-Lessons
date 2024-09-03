@@ -9,6 +9,16 @@ people = [
     {"name": "Bob", "age": 20},
     {"name": "Diana", "age": 30},
 ]
+younger_person = min(people, key=lambda person: (person["age"], person["name"])) # берем результат в скобки - tuple
+print(younger_person)
+
+
+
+
+
+
+
+
 
 # решение
 min_people = min(people, key=lambda x: (x["age"], x["name"]))
