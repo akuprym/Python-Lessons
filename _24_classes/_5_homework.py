@@ -9,6 +9,27 @@
 # Ork is alive Ork (level: 2, hp: 140)
 # Elf is dead Elf (level: 1, hp: -4)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # решение (классы очень вариативны, ваше решение может отличаться)
 
 class Character:
