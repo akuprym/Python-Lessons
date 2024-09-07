@@ -8,7 +8,10 @@ CRYPTO_NAME_TO_TICKER = {
     "Ethereum": "ETHUSDT",
     "Doge": "DOGEUSDT"
 }
+
+
 bot = TeleBot(TOKEN)
+
 
 @bot.message_handler(commands=["start"])
 def send_welcome(message):
@@ -19,6 +22,7 @@ def send_welcome(message):
         markup.add(item_button)
     bot.send_message(message.chat.id, "Choose a crypto", reply_markup=markup)
 
+
 @bot.message_handler(func=lambda message: message.text in CRYPTO_NAME_TO_TICKER.keys())
 def send_price(message):
     crypto_name = message.text
@@ -26,6 +30,7 @@ def send_price(message):
     ticker = CRYPTO_NAME_TO_TICKER[crypto_name]
     price = get_price_by_ticker(ticker=ticker)
     bot.send_message(message.chat.id, f"The price of {crypto_name} to USDT is {price}")
+
 
 def get_price_by_ticker(*, ticker: str) -> float:
     url = 'https://api.binance.com/api/v3/ticker/price'
