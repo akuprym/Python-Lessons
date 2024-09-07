@@ -1,5 +1,3 @@
-from pyexpat.errors import messages
-
 from telebot import TeleBot
 
 TOKEN = ""
