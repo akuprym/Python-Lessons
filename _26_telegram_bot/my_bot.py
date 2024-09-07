@@ -2,7 +2,7 @@ from pyexpat.errors import messages
 
 from telebot import TeleBot
 
-TOKEN = "7304930355:AAF-JHr5mBCQx301sk5sq60UZLI9R_iVX8A"
+TOKEN = ""
 
 bot = TeleBot(TOKEN)
 
